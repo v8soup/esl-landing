@@ -1,0 +1,20 @@
+
+
+<%= bootstrap_form_with(model: contact, url: (defined?(form_url) ? form_url : nil), data: { turbo: false }) do |form| %>
+  <div class="card">
+    <div class="card-body">
+      <%= form.text_field :first_name, required: true, label: raw('First Name <span class="text-danger">*</span>') %>
+      <%= form.text_field :last_name, label: raw('Last Name') %>
+      <%= form.email_field :email, required: true, label: raw('Email <span class="text-danger">*</span>') %>
+      <%= form.phone_field :phone %>
+      <%= form.text_field :first_language, required: true, label: raw('First Language <span class="text-danger">*</span>') %>
+      <%= form.text_field :subject, required: true, label: raw('Subject <span class="text-danger">*</span>') %>
+      <%= form.text_area :message, required: true, label: raw('Message <span class="text-danger">*</span>'), placeholder: 'Enter your message here...' %>
+      <% if authenticated? %>
+      <%= form.text_area :notes %>
+      <% end %>
+      <%= form.submit "Send", class: "btn btn-primary w-100 mb-5" %>
+    </div>
+  </div>
+<% end %>
+

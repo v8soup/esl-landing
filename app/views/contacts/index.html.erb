@@ -1,0 +1,39 @@
+<div class="container">
+  <% content_for :title, "Contacts" %>
+
+  <h1>Contacts</h1>
+  <p>
+    <%= link_to "New Contact", new_contact_path, class: "btn btn-primary" %>
+  </p>
+
+  <table class="table table-striped" id="contacts">
+    <thead>
+      <tr>
+        <th>Date</th>
+        <th>Full Name</th>
+        <th>First Language</th>
+        <th>Subject</th>
+        <th>Message</th>
+        <th>Notes</th>
+        <th colspan="2"></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @contacts.each do |contact| %>
+        <tr id="<%= dom_id contact %>">
+          <td><%= contact.created_at.strftime("%B %d, %Y") %></td>
+          <td><%= contact.first_name %> <%= contact.last_name %><br />
+            <%= contact.email %><br />
+            <%= contact.phone %></td>
+          <td><%= contact.first_language %></td>
+          <td><%= contact.subject %></td>
+          <td><%= contact.message %></td>
+          <td><%= contact.notes %></td>
+          <td><%= link_to "Show", contact, class: "btn btn-info" %></td>
+          <td><%= link_to "Edit", edit_contact_path(contact), class: "btn btn-warning" %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>

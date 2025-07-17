@@ -1,0 +1,56 @@
+@use 'bootstrap/scss/bootstrap';
+@use 'bootstrap-icons/font/bootstrap-icons';
+
+.icon-circle {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: contain;
+  object-position: center center;
+  display: block;
+  background: #fff; /* helps visualize transparent GIFs */
+  transform: translateY(10px) translateX(2px); /* Nudge up and right, adjust as needed */
+}
+
+.icon-month {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: contain;
+  object-position: center center;
+  display: block;
+  background: #fff; /* helps visualize transparent GIFs */
+  transform: translateY(0px) translateX(0px); /* Nudge up and right, adjust as needed */
+}
+
+.logo-img {
+    height: 50px;
+    width: auto;
+}
+
+.icon-img {
+  height: 30px;
+  width: auto;
+}
+
+.img-fixed-height {
+  max-height: 100px;
+  height: auto;
+  width: auto;
+}
+
+.accordion-item,
+.accordion-header,
+.accordion-button,
+.accordion-body {
+  background: transparent !important;
+}
+
+.accordion-body {
+  text-align: left !important;
+}
+
+.accordion-button {
+  font-size: 1.25rem !important;
+  font-weight: 600;
+}

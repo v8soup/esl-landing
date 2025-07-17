@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title><%= content_for(:title) || "Esl w/ Ramona" %></title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <meta name="keywords" content="ESL, IELTS, TOEFL, TOEIC, English speaking, English conversation, Vancouver, British Columbia" />
+    <meta name="description" content="Fast track your English fluency." />
+
+    <%= yield :head %>
+
+    <%# Enable PWA manifest for installable apps (make sure to enable in config/routes.rb too!) %>
+    <%#= tag.link rel: "manifest", href: pwa_manifest_path(format: :json) %>
+
+    <link rel="icon" href="/icon.png" type="image/png">
+    <link rel="icon" href="/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/icon.png">
+    <!-- Removed duplicate <title> for accessibility -->
+    <%# Includes all stylesheet files in app/assets/stylesheets %>
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <!-- Font Awesome icons (free version)-->
+    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+    <!-- Simple line icons-->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.5.5/css/simple-line-icons.min.css" rel="stylesheet" />
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="/css/styles.css">
+    <%= javascript_importmap_tags %>
+  </head>
+
+  <body id="page-top">
+    <%= render "layouts/navbar" %>
+    <% flash.each do |key, value| %>
+      <% bs_class = case key.to_s
+        when 'notice' then 'alert-success'
+        when 'alert' then 'alert-danger'
+        else 'alert-info'
+      end %>
+      <div class="alert <%= bs_class %> alert-dismissible fade show w-100 rounded-0 mb-0" role="alert" style="border-radius:0;">
+        <%= value %>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      </div>
+    <% end %>
+    <%= render "layouts/header" %>
+    <%= yield %>
+    <%= render "layouts/footer" %>
+  </body>
+</html>
+

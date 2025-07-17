@@ -1,0 +1,22 @@
+<!-- Navigation-->
+<a class="menu-toggle rounded" href="javascript:void(0)" aria-label="Open menu" tabindex="0" role="button"><i class="fas fa-bars" aria-hidden="true"></i></a>
+<nav id="sidebar-wrapper" role="navigation" aria-label="Main navigation">
+    <ul class="sidebar-nav" role="menubar">
+        <li class="sidebar-brand" role="none"><a href="<%= root_path %>" class="js-scroll-trigger" role="menuitem" tabindex="0">ESL with Ramona</a></li>
+        <li class="sidebar-nav-item" role="none"><a href="<%= app_url %>" role="menuitem" tabindex="0">Sign in</a></li>
+        <li class="sidebar-nav-item" role="none"><a href="<%= root_path %>" class="js-scroll-trigger" role="menuitem" tabindex="0">Home</a></li>
+        <li class="sidebar-nav-item" role="none"><a href="<%= class_info_path %>" class="js-scroll-trigger" role="menuitem" tabindex="0">Class Info</a></li>
+        <li class="sidebar-nav-item" role="none"><a href="<%= class_info_path(anchor: "faq") %>" class="js-scroll-trigger" role="menuitem" tabindex="0">FAQ</a></li>
+        <li class="sidebar-nav-item" role="none"><a href="<%= app_url %>/spotlight_topic" class="js-scroll-trigger" role="menuitem" tabindex="0">Weekly Spotlight Topic</a></li>
+        <li class="sidebar-nav-item" role="none"><a href="<%= app_url %>/pronunciations" class="js-scroll-trigger" role="menuitem" tabindex="0">Pronunciation</a></li>
+        <li class="sidebar-nav-item" role="none"><a href="<%= root_path(anchor: "contact") %>" class="js-scroll-trigger" role="menuitem" tabindex="0">Contact Me</a></li>
+        <li class="sidebar-nav-item" role="none"><a href="<%= root_path(anchor: "contact-map") %>" class="js-scroll-trigger" role="menuitem" tabindex="0">Location</a></li>
+        <% if authenticated? %>
+        <li class="sidebar-nav-item" role="none"><hr></li>
+        <li class="sidebar-nav-item" role="none"><%= button_to "Sign out", session_path, method: :delete, class: "btn btn-link text-white", aria: { label: "Sign out" } %></li>
+        <li class="sidebar-nav-item" role="none"><a href="<%= contacts_path %>" class="js-scroll-trigger" role="menuitem" tabindex="0">Contacts</a></li>
+        <% end %>
+        
+        
+    </ul>
+</nav>

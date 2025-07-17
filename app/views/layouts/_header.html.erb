@@ -1,0 +1,11 @@
+<!-- Header-->
+<% if !authenticated? %> 
+<header class="masthead d-flex align-items-center" role="banner" aria-label="Site header">
+    <div class="container px-4 px-lg-5 text-center">
+        <h1 class="mb-1" id="main-title"><%= @header %></h1>
+        <h2 class="mb-3" id="subtitle"><%= @header_2 %></h2>
+        <p class="mb-5" id="subtext"><em><%= @header_3 %></em></p>
+        <a class="btn btn-dark btn-xl" href="<%= root_path(anchor: 'get-started') %>">Get Started</a>
+    </div>
+</header>
+<% end %>

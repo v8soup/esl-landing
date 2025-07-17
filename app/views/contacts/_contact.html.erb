@@ -1,0 +1,43 @@
+
+<!-- Not being used, but kept for reference -->
+<div id="<%= dom_id contact %>">
+  <p>
+    <strong>Date:</strong>
+    <%= contact.created_at.strftime("%B %d, %Y") %>
+  </p>
+  <p>
+    <strong>Full name:</strong>
+    <%= contact.first_name %> <%= contact.last_name %>
+  </p>
+
+  <p>
+    <strong>Email:</strong>
+    <%= contact.email %>
+  </p>
+
+  <p>
+    <strong>Phone:</strong>
+    <%= contact.phone %>
+  </p>
+
+  <p>
+    <strong>First language:</strong>
+    <%= contact.first_language %>
+  </p>
+
+  <p>
+    <strong>Subject:</strong>
+    <%= contact.subject %>
+  </p>
+
+  <p>
+    <strong>Message:</strong>
+    <%= contact.message %>
+  </p>
+
+  <p>
+    <strong>Notes:</strong>
+    <%= contact.notes %>
+  </p>
+
+</div>

@@ -1,0 +1,373 @@
+
+<!-- Skip to main content for accessibility -->
+<a href="#main-content" class="visually-hidden-focusable">Skip to main content</a>
+<!-- About-->
+<section class="content-section bg-light" id="class-info" role="main" aria-label="Class Information">
+    <div class="container px-4 px-lg-5" id="main-content">
+      <h1 class="mx-auto mb-0 text-center">            
+            Information About My Classes
+        </h1>
+        <h2 class="mx-auto mb-5 text-center">            
+            📚 Practical, intense, engaging, and designed for optimal student learning.
+        </h2>
+      <div class="row gx-4 gx-lg-5 mb-5 align-items-stretch">
+        <div class="col-lg-7 h-100 d-flex flex-column justify-content-center">
+          
+          <div class="bg-white rounded shadow-sm p-4 h-100">
+            <h5 class="fw-bold">🚀 Rapid English Speaking Band 5.5 ➡️ 8 MWF @ 3 pm</h5>
+            <hr>
+            <h6><u>Course Description</u>:</h6>
+            <p class="fw-bold">Are you <u>stuck</u> in IELTS band 6? OR TOEFL iBT 60–78?!? 🤐</p>
+            <p>This isn't another <i>tips and tricks</i> class. This is the <span class="fw-bold">intensive fluency practice</span> that made me the
+              <span class="fw-bold">#1 IELTS teacher in Korea-with a 1-year waitlist and students flying in from 5 countries.</span>
+            </p>
+            <p><span class="fw-bold">Here's what happens:</span>
+              <ul>
+                <li>You'll <span class="fw-bold">speak 5x more</span> than in any other class-because correction under pressure is the only way to band 8.</li>
+                <li>Every <span class="fw-bold">grammar error, awkward pause, or weak argument</span> gets <u class="fw-bold">hunted down</u> 🏹  and <span class="fw-bold">fixed live</span> (no hiding).</li>
+                <li>Fridays are <span class="fw-bold">'prove it'</span> days-where you re-deliver past answers flawlessly or repeat until you can.</li>
+              </ul>
+              <p class="fw-bold">You'll leave:</p>
+              <ul>
+                <li>✅ Able to <span class="fw-bold">bullsh*it convincingly</span> (essential for Speaking/Writing)</li>
+                <li>✅ <span class="fw-bold">Unshakable under examiner pressure</span> (no more nervous breakdowns)</li>
+                <li>✅ With a <span class="fw-bold">kill switch</span> ☠️ for bad habits (filler words, weak vocab, rambling)</li>
+              </ul>
+              <span class="mt-5 badge text-bg-danger fs-4 mx-auto d-block" style="max-width: 250px;">⚠️ Warning ⚠️</span>
+
+              <p class="fw-bold fs-5 text-center">No refunds if you cry 😭</p>
+          </div>
+        </div>
+        <div class="col-lg-5 h-100 d-flex flex-column">
+          <div class="card h-100 mb-0">
+            <div class="card-body d-flex flex-column justify-content-center">
+              <h5 class="card-title text-center">Requirements</h5>
+              <ul class="list-unstyled mb-4">
+                <li class="mb-2"><b>IELTS Speaking Score:</b> &gt; 5.5 or</li>
+                <li class="mb-2"><b>TOEFL Speaking Score:</b> &gt; 17 or</li>
+                <li class="mb-2"><b>TOEIC Speaking Score:</b> &gt; 120</li>
+                <li class="mb-2"><b>Mandatory Speaking Test:</b> All new students must take a short speaking test with Ramona (phone/Zoom).</li>
+                <li class="mb-2">Access to a computer or mobile device with internet.</li>
+              </ul>
+              <h5 class="card-title text-center">Class Style</h5>
+              <ul class="list-unstyled">
+                <li class="mb-2"><b>Monday, Wednesday, Friday:</b> @3 pm for 2 hours<br />Pronunciation, fluency, and grammar practice</li>
+                <li class="mb-2"><b>Assignments:</b> 1 per week</li>
+                <li class="mb-2"><b>Homework:</b> 4–6 hours per week</li>
+                <li class="mb-2"><b>Mock Test:</b> At the end of every month</li>
+                <li class="mb-2"><b>Class size:</b> 6 maximum</li>
+              </ul>
+              <p class="fs-4 fw-bold">Price: $600 for 24 hours/month</p>
+              <p class="fw-bold">No registration fee.</p>
+              <p class="fw-bold">Month-to-Month.</p>
+            </div>
+          </div>
+          <a class="btn btn-dark btn-xl mt-3 mx-auto d-block" style="max-width: 250px;" href="#schedule">Monthy schedule</a>
+        </div>
+      </div>
+    </div>
+</section>
+<!-- Services-->
+<section class="content-section bg-primary text-white text-center" id="services">
+    <div class="container px-4 px-lg-5">
+        <div class="content-section-heading">
+            <h3 class="text-secondary mb-0" id="schedule">Schedule</h3>
+            <h2 class="mb-5">Month-to-Month</h2>
+        </div>
+        <div class="row gx-4 gx-lg-5">
+            <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
+                <span class="service-icon rounded-circle mx-auto mb-3"><%= image_tag("/assets/img/months/#{(Time.current).strftime("%B").downcase}.png", class: "icon-month", alt: "#{(Time.current).strftime("%B").downcase}") %></span>
+                <h4><strong><%= Time.current.strftime("%B %Y") %></strong></h4>
+                <p class="text-faded mb-0">Open for registration</p>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
+                <span class="service-icon rounded-circle mx-auto mb-3"><%= image_tag("/assets/img/months/#{(Time.current + 1.month).strftime("%B").downcase}.png", class: "icon-month", alt: "#{(Time.current + 1.month).strftime("%B").downcase}") %></span>
+                <h4><strong><%= (Time.current + 1.month).strftime("%B %Y") %></strong></h4>
+                <p class="text-faded mb-0">Open for registration</p>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-5 mb-md-0">
+                <span class="service-icon rounded-circle mx-auto mb-3"><%= image_tag("/assets/img/months/#{(Time.current + 2.month).strftime("%B").downcase}.png", class: "icon-month", alt: "#{(Time.current + 2.month).strftime("%B").downcase}") %></span>
+                <h4><strong><%= (Time.current + 2.month).strftime("%B %Y") %></strong></h4>
+                <p class="text-faded mb-0">
+                    Open for registration
+                </p>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <span class="service-icon rounded-circle mx-auto mb-3"><%= image_tag("/assets/img/months/#{(Time.current + 3.month).strftime("%B").downcase}.png", class: "icon-month", alt: "#{(Time.current + 3.month).strftime("%B").downcase}") %></span>
+                <h4><strong><%= (Time.current + 3.month).strftime("%B %Y") %></strong></h4>
+                <p class="text-faded mb-0">Open for registration</p>
+            </div>
+        </div>
+        <p class="mb-5 mt-4">
+            <strong>Remember!</strong> An English speaking test with Ramona is <b>mandatory</b> before being accepted into the class.
+        </p>
+        <a class="btn btn-xl btn-light me-4" href="<%= root_path(anchor: "contact") %>">Contact me!</a>
+    </div>
+</section>
+<!-- Callout-->
+<section class="callout">
+    <div class="container px-4 px-lg-5 text-center text-white">
+        <h2 class="mx-auto" id="faq" style="scroll-margin-top: 100px;">
+            FAQs
+        </h2>
+        <p class="lead fw-medium mb-5">Curious about how our IELTS classes work? You're in the right place. We've gathered answers to the questions students ask most, so you can feel confident and informed every step of the way.</p>
+        <div class="row gx-4 gx-lg-5 justify-content-center mb-5">
+            <div class="col-lg-8">
+                <h4 class="text-center">About My Class</h4>
+                <div class="accordion" id="faqAccordion">
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="faq-heading-19">
+                      <button class="accordion-button collapsed text-white" type="button" data-bs-toggle="collapse" data-bs-target="#faq-collapse-19" aria-expanded="false" aria-controls="faq-collapse-19">
+                        Is this class only for test takers?
+                      </button>
+                    </h2>
+                    <div id="faq-collapse-19" class="accordion-collapse collapse" aria-labelledby="faq-heading-19" data-bs-parent="#faqAccordion">
+                      <div class="accordion-body text-white">
+                        <p class="lead fw-normal">No. This class is open to anyone who wants to improve their English speaking skills, whether or not they are preparing for a test. It is not a casual class—it is designed for rapid English speaking development.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="faq-heading-1">
+                      <button class="accordion-button collapsed text-white" type="button" data-bs-toggle="collapse" data-bs-target="#faq-collapse-1" aria-expanded="false" aria-controls="faq-collapse-1">
+                        Why only English speaking class? Why not reading, writing, and listening too?
+                      </button>
+                    </h2>
+                    <div id="faq-collapse-1" class="accordion-collapse collapse" aria-labelledby="faq-heading-1" data-bs-parent="#faqAccordion">
+                      <div class="accordion-body text-white">
+                        <p class="lead fw-normal">My focus is solely on speaking skills because that is where most students struggle. Reading, writing, and listening are important too, but they can be improved more easily through self-study and practice. By developing your speaking skills, you also strengthen the other three. In my class, your reading, writing, and listening skills will improve significantly.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="faq-heading-2">
+                      <button class="accordion-button collapse text-white" type="button" data-bs-toggle="collapse" data-bs-target="#faq-collapse-2" aria-expanded="false" aria-controls="faq-collapse-2">
+                        Where is the class location?
+                      </button>
+                    </h2>
+                    <div id="faq-collapse-2" class="accordion-collapse collapse" aria-labelledby="faq-heading-2" data-bs-parent="#faqAccordion">
+                      <div class="accordion-body text-white">
+                        <p class="lead fw-normal">Currently, classes are held at my home near Quebec St. and E 14th Avenue in Vancouver, BC.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="faq-heading-3">
+                      <button class="accordion-button collapsed text-white" type="button" data-bs-toggle="collapse" data-bs-target="#faq-collapse-3" aria-expanded="false" aria-controls="faq-collapse-3">
+                        How does this hybrid class work?
+                      </button>
+                    </h2>
+                    <div id="faq-collapse-3" class="accordion-collapse collapse" aria-labelledby="faq-heading-3" data-bs-parent="#faqAccordion">
+                      <div class="accordion-body text-white">
+                        <p class="lead fw-normal">This class combines in-person and online learning. Students can choose to attend classes at my home or join remotely via Zoom. Those who cannot attend in person due to distance or personal circumstances can participate online. I encourage in-person learning, as some online students find it difficult to concentrate, but I have techniques to keep everyone engaged.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="faq-heading-4">
+                      <button class="accordion-button collapsed text-white" type="button" data-bs-toggle="collapse" data-bs-target="#faq-collapse-4" aria-expanded="false" aria-controls="faq-collapse-4">
+                        How are your classes structured?
+                      </button>
+                    </h2>
+                    <div id="faq-collapse-4" class="accordion-collapse collapse" aria-labelledby="faq-heading-4" data-bs-parent="#faqAccordion">
+                      <div class="accordion-body text-white">
+                        <p class="lead fw-normal">Classes are held in groups of up to six people. We practice pronunciation, fluency, vocabulary, and grammar through many practice questions.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="faq-heading-5">
+                      <button class="accordion-button collapsed text-white" type="button" data-bs-toggle="collapse" data-bs-target="#faq-collapse-5" aria-expanded="false" aria-controls="faq-collapse-5">
+                        What levels of English do you accept into your class?
+                      </button>
+                    </h2>
+                    <div id="faq-collapse-5" class="accordion-collapse collapse" aria-labelledby="faq-heading-5" data-bs-parent="#faqAccordion">
+                      <div class="accordion-body text-white">
+                        <p class="lead fw-normal">IELTS Speaking score above 5.5 or TOEFL Speaking score above 17. However, an actual score is not required—it simply helps me gauge your skill level. Many ESL students have never taken an English exam but are eager to learn English quickly.</p>
+                        <p class="lead fw-normal">Everyone’s skills vary. A student may have strong fluency (IELTS score 7) but weak grammar (IELTS score 4), or anything in between. That’s why an English speaking test with me is mandatory.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="faq-heading-6">
+                      <button class="accordion-button collapsed text-white" type="button" data-bs-toggle="collapse" data-bs-target="#faq-collapse-6" aria-expanded="false" aria-controls="faq-collapse-6">
+                        Why 3 days a week?
+                      </button>
+                    </h2>
+                    <div id="faq-collapse-6" class="accordion-collapse collapse" aria-labelledby="faq-heading-6" data-bs-parent="#faqAccordion">
+                      <div class="accordion-body text-white">
+                        <p class="lead fw-normal">Frequent exposure and practice are key!</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="faq-heading-7">
+                      <button class="accordion-button collapsed text-white" type="button" data-bs-toggle="collapse" data-bs-target="#faq-collapse-7" aria-expanded="false" aria-controls="faq-collapse-7">
+                        How long does it take to prepare for the IELTS?
+                      </button>
+                    </h2>
+                    <div id="faq-collapse-7" class="accordion-collapse collapse" aria-labelledby="faq-heading-7" data-bs-parent="#faqAccordion">
+                      <div class="accordion-body text-white">
+                        <p class="lead fw-normal">It depends on your first language. The more grammatically different it is from English, the longer it may take.</p>
+                        <p class="lead fw-normal">For example, a native Korean or Japanese speaker may take longer to prepare for the IELTS than a native French speaker.</p>
+                        <p class="lead fw-normal">A native Korean or Japanese speaker with an IELTS score of 6 may require 4–5 months, while a native Spanish speaker with the same score may need only 2–3 months.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="faq-heading-8">
+                      <button class="accordion-button collapsed text-white" type="button" data-bs-toggle="collapse" data-bs-target="#faq-collapse-8" aria-expanded="false" aria-controls="faq-collapse-8">
+                        Is it really possible for a native Korean or Japanese speaker to improve from an IELTS score of 6 to 7 in just 4–5 months?
+                      </button>
+                    </h2>
+                    <div id="faq-collapse-8" class="accordion-collapse collapse" aria-labelledby="faq-heading-8" data-bs-parent="#faqAccordion">
+                      <div class="accordion-body text-white">
+                        <p class="lead fw-normal">My class is designed for rapid English speaking improvement. I’ve had Korean and Japanese students go from a 6 to a 7 in just 3 months. It’s definitely possible.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="faq-heading-11">
+                      <button class="accordion-button collapsed text-white" type="button" data-bs-toggle="collapse" data-bs-target="#faq-collapse-11" aria-expanded="false" aria-controls="faq-collapse-11">
+                        What materials or textbooks do you use?
+                      </button>
+                    </h2>
+                    <div id="faq-collapse-11" class="accordion-collapse collapse" aria-labelledby="faq-heading-11" data-bs-parent="#faqAccordion">
+                      <div class="accordion-body text-white">
+                        <p class="lead fw-normal">I use my own online resources. My students have access to a database with thousands of IELTS, TOEFL, CELPIP, and PTE questions when they join.</p>
+                        <p class="lead fw-normal">Each class focuses on a specific topic, such as “family,” “work,” or “technology.” We practice questions related to that topic, ranging from easy personal questions to more academic, abstract ones, depending on the test you are preparing for.</p>
+                        <p class="lead fw-normal">Each week, I post a <a href="<%= app_url %>/spotlight_topic" class="text-white">Spotlight Topic of the Week</a> so you can see the types of questions we practice in class—these are actual questions from IELTS, TOEFL, CELPIP, and PTE speaking tests.</p>
+                         <p class="lead fw-normal">Check out the <a href="<%= app_url %>/pronunciations" class="text-white">Pronunciations</a> page. Every class begins with the pronunciation exercises you need most.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="faq-heading-12">
+                      <button class="accordion-button collapsed text-white" type="button" data-bs-toggle="collapse" data-bs-target="#faq-collapse-12" aria-expanded="false" aria-controls="faq-collapse-12">
+                        Do you offer a free trial class or consultation?
+                      </button>
+                    </h2>
+                    <div id="faq-collapse-12" class="accordion-collapse collapse" aria-labelledby="faq-heading-12" data-bs-parent="#faqAccordion">
+                      <div class="accordion-body text-white">
+                        <p class="lead fw-normal">Yes, I offer a free trial class for new students to observe. This allows you to experience my teaching style and see if it’s a good fit before committing.</p>
+                        <p class="lead fw-normal"><a href="<%= root_path(anchor: 'contact') %>" class="text-white">Contact me</a> to schedule your free trial class or a free speaking test.</p>
+
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row gx-4 gx-lg-5 justify-content-center mb-5">
+            <div class="col-lg-8">
+                <h4 class="text-center">Test Preparation</h4>
+                <div class="accordion" id="faqAccordion-13">
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="faq-heading-13">
+                      <button class="accordion-button collapsed text-white" type="button" data-bs-toggle="collapse" data-bs-target="#faq-collapse-13" aria-expanded="false" aria-controls="faq-collapse-13">
+                        Do you cover all four IELTS skills: Listening, Reading, Writing, and Speaking?
+                      </button>
+                    </h2>
+                    <div id="faq-collapse-13" class="accordion-collapse collapse" aria-labelledby="faq-heading-13" data-bs-parent="#faqAccordion-13">
+                      <div class="accordion-body text-white">
+                        <p class="lead fw-normal">No, I only cover the English speaking test. However, strong speaking skills enhance and complement the other three skills.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="faq-heading-14">
+                      <button class="accordion-button collapsed text-white" type="button" data-bs-toggle="collapse" data-bs-target="#faq-collapse-14" aria-expanded="false" aria-controls="faq-collapse-14">
+                        Will I get practice tests and feedback?
+                      </button>
+                    </h2>
+                    <div id="faq-collapse-14" class="accordion-collapse collapse" aria-labelledby="faq-heading-14" data-bs-parent="#faqAccordion-13">
+                      <div class="accordion-body text-white">
+                        <p class="lead fw-normal">Yes. At the end of every month, we do a mock test with feedback. These mock tests are recorded and reviewed in class.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="faq-heading-15">
+                      <button class="accordion-button collapsed text-white" type="button" data-bs-toggle="collapse" data-bs-target="#faq-collapse-15" aria-expanded="false" aria-controls="faq-collapse-15">
+                        How do you help students improve their scores?
+                      </button>
+                    </h2>
+                    <div id="faq-collapse-15" class="accordion-collapse collapse" aria-labelledby="faq-heading-15" data-bs-parent="#faqAccordion-13">
+                      <div class="accordion-body text-white">
+                        <p class="lead fw-normal">Improvement in all four areas—fluency, vocabulary, grammar, and pronunciation—is key. In each class, I provide personalized feedback and targeted practice. This includes identifying specific areas for improvement, offering tailored exercises, and conducting regular progress assessments.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="faq-heading-16">
+                      <button class="accordion-button collapsed text-white" type="button" data-bs-toggle="collapse" data-bs-target="#faq-collapse-16" aria-expanded="false" aria-controls="faq-collapse-16">
+                        Do you teach test-taking strategies?
+                      </button>
+                    </h2>
+                    <div id="faq-collapse-16" class="accordion-collapse collapse" aria-labelledby="faq-heading-16" data-bs-parent="#faqAccordion-13">
+                      <div class="accordion-body text-white">
+                        <p class="lead fw-normal">Yes, I teach various test-taking strategies tailored to the ESL exams. This includes time management techniques, question analysis, and effective response strategies to help students maximize their scores.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="faq-heading-22">
+                      <button class="accordion-button collapsed text-white" type="button" data-bs-toggle="collapse" data-bs-target="#faq-collapse-22" aria-expanded="false" aria-controls="faq-collapse-22">
+                        What if I don't get my score?
+                      </button>
+                    </h2>
+                    <div id="faq-collapse-22" class="accordion-collapse collapse" aria-labelledby="faq-heading-22" data-bs-parent="#faqAccordion-20">
+                      <div class="accordion-body text-white">
+                        <p class="lead fw-normal">I tell my students that passing on the first try can be difficult, mainly because of nerves. Nerves are the number one challenge for first-time test takers. I always suggest taking the test once to experience the pressure and get a feel for the format. If you don't pass, you can learn from the experience and be better prepared for your next attempt.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="row gx-4 gx-lg-5 justify-content-center mb-5">
+            <div class="col-lg-8">
+                <h4 class="text-center">Scheduling and Pricing</h4>
+                <div class="accordion" id="faqAccordion-20">
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="faq-heading-20">
+                      <button class="accordion-button collapsed text-white" type="button" data-bs-toggle="collapse" data-bs-target="#faq-collapse-20" aria-expanded="false" aria-controls="faq-collapse-20">
+                        What are your class hours and how flexible is the schedule?
+                      </button>
+                    </h2>
+                    <div id="faq-collapse-20" class="accordion-collapse collapse" aria-labelledby="faq-heading-20" data-bs-parent="#faqAccordion-20">
+                      <div class="accordion-body text-white">
+                        <p class="lead fw-normal">Please check the <a class="text-white" href="#class-info">Class Information</a> section for more details. In general, class days and hours are set.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="faq-heading-21">
+                      <button class="accordion-button collapsed text-white" type="button" data-bs-toggle="collapse" data-bs-target="#faq-collapse-21" aria-expanded="false" aria-controls="faq-collapse-21">
+                        How much does the class cost?
+                      </button>
+                    </h2>
+                    <div id="faq-collapse-21" class="accordion-collapse collapse" aria-labelledby="faq-heading-21" data-bs-parent="#faqAccordion-20">
+                      <div class="accordion-body text-white">
+                        <p class="lead fw-normal">Check the <a href="#class-info" class="text-white">Class Information</a> section for pricing details.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+        </div>
+        <p class="lead mb-5 mt-4">
+            <strong class="fw-semibold">Have more questions?</strong> <a href="<%= root_path(anchor: 'contact') %>" class="text-white">Contact me</a> and I'll be happy to answer them.
+        </p>
+<a class="btn btn-primary btn-xl" href="<%= root_path(anchor: 'contact') %>" aria-label="Contact Ramona for more information">Contact me</a>
+    </div>
+</section>
+<!-- Portfolio-->
+
+<!-- Call to Action-->
