@@ -21,6 +21,13 @@ class ContactsController < ApplicationController
 
   # POST /contacts or /contacts.json
   def create
+    # Honeypot spam check
+    if params[:contact][:nickname].present?
+      # Detected as spam
+      redirect_to new_contact_path, alert: "Spam detected. Please try again."
+      return
+    end
+
     @contact = Contact.new(contact_params)
 
     respond_to do |format|
@@ -65,6 +72,6 @@ class ContactsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def contact_params
-      params.require(:contact).permit(:first_name, :last_name, :email, :phone, :first_language, :subject, :message, :notes)
+      params.require(:contact).permit(:first_name, :last_name, :email, :phone, :first_language, :subject, :message, :notes, :nickname)
     end
 end

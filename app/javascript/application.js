@@ -4,5 +4,8 @@ import "controllers"
 import * as bootstrap from "bootstrap"
 import { initSidebarMenu } from "sidebar"
 
+// Disable Turbo drive for whole application
+Turbo.session.drive = false
+
 window.addEventListener('DOMContentLoaded', initSidebarMenu)
 document.addEventListener('turbo:load', initSidebarMenu)
