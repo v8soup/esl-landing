@@ -1,11 +1,119 @@
 <!-- Header-->
 <% if !authenticated? %> 
-<header class="masthead d-flex align-items-center" role="banner" aria-label="Site header">
-    <div class="container px-4 px-lg-5 text-center">
-        <h1 class="mb-1" id="main-title"><%= @header %></h1>
-        <h2 class="mb-3" id="subtitle"><%= @header_2 %></h2>
-        <p class="mb-5" id="subtext"><em><%= @header_3 %></em></p>
-        <a class="btn btn-dark btn-xl" href="<%= root_path(anchor: 'get-started') %>">Get Started</a>
+<a href="#main-title" class="visually-hidden-focusable skip-link" tabindex="0">Skip to main content</a>
+<header class="masthead d-flex align-items-center" role="banner" aria-label="Site Header">
+    <div class="container px-4 px-lg-5" role="presentation">
+        <div class="row">
+            <div class="col-md-2">
+            </div>
+            <div class="col-md-8 text-center" role="main" aria-labelledby="main-title">
+                <h1 class="mb-1" id="main-title" tabindex="-1"><%= @header %></h1>
+                <h2 class="mb-3" id="subtitle"><%= @header_2 %></h2>
+                <p class="mb-5" id="subtext"><em><%= @header_3 %></em></p>
+                <a class="btn btn-dark btn-xl" href="<%= root_path(anchor: 'get-started') %>" aria-label="Get started with ESL landing page">Get Started</a>
+            </div>
+            <div class="col-md-2 text-center">
+                <div class="row">
+                    <div class="col-12">
+                        <a href="<%= app_url %>/spotlight_topic" class="position-relative d-inline-block mt-5" style="width:100%;" aria-label="Go to Spotlight Topic of the Week">
+                          <span class="twinkle-star star1" aria-hidden="true"></span>
+                          <span class="twinkle-star star2" aria-hidden="true"></span>
+                          <span class="twinkle-star star3" aria-hidden="true"></span>
+                          <span class="twinkle-star star4" aria-hidden="true"></span>
+                          <span class="twinkle-star star5" aria-hidden="true"></span>
+                          <img src="/assets/img/spotlight-1-transparent-bg.png" alt="Spotlight Topic of the Week badge" class="img-fluid my-3 spotlight-img-hover" style="max-width: 100%; height: auto; position: relative; z-index: 2; transition: transform 0.2s;">
+                        </a>
+                    </div> 
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <a href="<%= app_url %>/pronunciations" aria-label="Go to Pronunciation Practice">
+                            <img src="/assets/img/pronunciation-1.png" alt="Pronunciation Practice badge: megaphone shouting 'pronunciation practice'" class="img-fluid my-3 pronunciation-shake pronunciation-img-hover" style="max-width: 100%; height: auto; transition: transform 0.2s;">
+                        </a>
+                    </div> 
+                </div>
+            </div>
+        </div>
+    <style>
+      .visually-hidden-focusable.skip-link {
+        position: absolute;
+        left: -10000px;
+        top: auto;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+      }
+      .visually-hidden-focusable.skip-link:focus {
+        position: static;
+        width: auto;
+        height: auto;
+        left: auto;
+        background: #ffd700;
+        color: #222;
+        padding: 0.5em 1em;
+        border-radius: 0.3em;
+        z-index: 10000;
+      }
+      .position-relative.d-inline-block:hover .spotlight-img-hover {
+        transform: scale(1.08) rotate(-2deg);
+        filter: brightness(1.12) drop-shadow(0 0 12px #ffd700cc);
+      }
+      .position-relative.d-inline-block:hover .twinkle-star {
+        opacity: 1;
+        filter: brightness(1.5) drop-shadow(0 0 6px #fff7);
+      }
+      .twinkle-star {
+        position: absolute;
+        width: 12px;
+        height: 12px;
+        background: radial-gradient(circle, #fff 60%, #ffd700 100%);
+        border-radius: 50%;
+        opacity: 0.8;
+        pointer-events: none;
+        z-index: 3;
+        animation: twinkle 2.5s infinite;
+      }
+      .star1 { top: 10%; left: 20%; animation-delay: 0s; }
+      .star2 { top: 5%; left: 70%; width: 8px; height: 8px; animation-delay: 0.7s; }
+      .star3 { top: 60%; left: 90%; width: 10px; height: 10px; animation-delay: 1.2s; }
+      .star4 { top: 80%; left: 15%; width: 7px; height: 7px; animation-delay: 1.8s; }
+      .star5 { top: 50%; left: 5%; width: 9px; height: 9px; animation-delay: 2.1s; }
+      @keyframes twinkle {
+        0%, 100% { opacity: 0.8; transform: scale(1); }
+        20% { opacity: 0.2; transform: scale(0.7); }
+        50% { opacity: 1; transform: scale(1.2); }
+        70% { opacity: 0.4; transform: scale(0.8); }
+      }
+      .pronunciation-img-hover:hover {
+        transform: scale(1.08) rotate(3deg);
+        filter: brightness(1.35) drop-shadow(0 0 24px #00e0ffcc) drop-shadow(0 0 32px #fff6);
+        animation-play-state: paused !important;
+      }
+      .pronunciation-img-hover:hover.pronunciation-shake {
+        animation-play-state: paused !important;
+      }
+      .pronunciation-shake {
+        animation: shake-megaphone 3s infinite;
+        /* 2s shake, 1s pause */
+        animation-timing-function: ease-in-out;
+      }
+      @keyframes shake-megaphone {
+        0%, 66.67%, 100% { transform: none; }
+        5% { transform: rotate(-7deg) scale(1.04); }
+        10% { transform: rotate(7deg) scale(1.07); }
+        15% { transform: rotate(-10deg) scale(1.1); }
+        20% { transform: rotate(10deg) scale(1.13); }
+        25% { transform: rotate(-8deg) scale(1.09); }
+        30% { transform: rotate(8deg) scale(1.06); }
+        35% { transform: rotate(-5deg) scale(1.03); }
+        40% { transform: rotate(5deg) scale(1.01); }
+        45% { transform: rotate(-3deg) scale(1.02); }
+        50% { transform: rotate(3deg) scale(1.01); }
+        55% { transform: rotate(-2deg) scale(1.01); }
+        60% { transform: rotate(2deg) scale(1.01); }
+        65% { transform: none; }
+      }
+    </style>
     </div>
 </header>
 <% end %>

@@ -34,6 +34,7 @@
   </head>
 
   <body id="page-top">
+    <a href="#main-content" class="visually-hidden-focusable skip-link">Skip to main content</a>
     <%= render "layouts/navbar" %>
     <% flash.each do |key, value| %>
       <% bs_class = case key.to_s
@@ -47,7 +48,9 @@
       </div>
     <% end %>
     <%= render "layouts/header" %>
-    <%= yield %>
+    <main id="main-content" tabindex="-1" role="main">
+      <%= yield %>
+    </main>
     <%= render "layouts/footer" %>
   </body>
 </html>

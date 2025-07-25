@@ -13,7 +13,8 @@
       <%= form.phone_field :phone %>
       <%= form.text_field :first_language, required: true, label: raw('First Language <span class="text-danger">*</span>') %>
       <%= form.text_field :subject, required: true, label: raw('Subject <span class="text-danger">*</span>') %>
-      <%= form.text_area :message, required: true, label: raw('Message <span class="text-danger">*</span>'), placeholder: 'Enter your message here...' %>
+      <%= form.text_area :message, required: true, label: raw('Message <span class="text-danger">*</span>'), 
+      placeholder: 'Enter your message here...', rows: 5 %>
       <% if authenticated? %>
       <%= form.text_area :notes %>
       <% end %>

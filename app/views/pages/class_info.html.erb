@@ -13,7 +13,7 @@
       <div class="row gx-4 gx-lg-5 mb-5 align-items-stretch">
         <div class="col-lg-7 h-100 d-flex flex-column justify-content-center">
           
-          <div class="bg-white rounded shadow-sm p-4 h-100">
+          <div class="bg-white rounded shadow-sm p-4 h-100" aria-label="Class Description">
             <h5 class="fw-bold">🚀 Rapid English Speaking Band 5.5 ➡️ 8 MWF @ 3 pm</h5>
             <hr>
             <h6><u>Course Description</u>:</h6>
@@ -38,7 +38,7 @@
               <p class="fw-bold fs-5 text-center">No refunds if you cry 😭</p>
           </div>
         </div>
-        <div class="col-lg-5 h-100 d-flex flex-column">
+        <div class="col-lg-5 h-100 d-flex flex-column" aria-label="Class Requirements and Style">
           <div class="card h-100 mb-0">
             <div class="card-body d-flex flex-column justify-content-center">
               <h5 class="card-title text-center">Requirements</h5>
@@ -62,13 +62,13 @@
               <p class="fw-bold">Month-to-Month.</p>
             </div>
           </div>
-          <a class="btn btn-dark btn-xl mt-3 mx-auto d-block" style="max-width: 250px;" href="#schedule">Monthy schedule</a>
+          <a class="btn btn-dark btn-xl mt-3 mx-auto d-block" style="max-width: 250px;" href="#schedule" aria-label="View monthly class schedule">Monthy schedule</a>
         </div>
       </div>
     </div>
 </section>
 <!-- Services-->
-<section class="content-section bg-primary text-white text-center" id="services">
+<section class="content-section bg-primary text-white text-center" id="services" role="region" aria-label="Class Schedule">
     <div class="container px-4 px-lg-5">
         <div class="content-section-heading">
             <h3 class="text-secondary mb-0" id="schedule">Schedule</h3>
@@ -76,24 +76,24 @@
         </div>
         <div class="row gx-4 gx-lg-5">
             <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
-                <span class="service-icon rounded-circle mx-auto mb-3"><%= image_tag("/assets/img/months/#{(Time.current).strftime("%B").downcase}.png", class: "icon-month", alt: "#{(Time.current).strftime("%B").downcase}") %></span>
+                <span class="service-icon rounded-circle mx-auto mb-3"><%= image_tag("/assets/img/months/#{(Time.current).strftime("%B").downcase}.png", class: "icon-month", alt: "Calendar icon for #{(Time.current).strftime("%B %Y")}") %></span>
                 <h4><strong><%= Time.current.strftime("%B %Y") %></strong></h4>
                 <p class="text-faded mb-0">Open for registration</p>
             </div>
             <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
-                <span class="service-icon rounded-circle mx-auto mb-3"><%= image_tag("/assets/img/months/#{(Time.current + 1.month).strftime("%B").downcase}.png", class: "icon-month", alt: "#{(Time.current + 1.month).strftime("%B").downcase}") %></span>
+                <span class="service-icon rounded-circle mx-auto mb-3"><%= image_tag("/assets/img/months/#{(Time.current + 1.month).strftime("%B").downcase}.png", class: "icon-month", alt: "Calendar icon for #{(Time.current + 1.month).strftime("%B %Y")}") %></span>
                 <h4><strong><%= (Time.current + 1.month).strftime("%B %Y") %></strong></h4>
                 <p class="text-faded mb-0">Open for registration</p>
             </div>
             <div class="col-lg-3 col-md-6 mb-5 mb-md-0">
-                <span class="service-icon rounded-circle mx-auto mb-3"><%= image_tag("/assets/img/months/#{(Time.current + 2.month).strftime("%B").downcase}.png", class: "icon-month", alt: "#{(Time.current + 2.month).strftime("%B").downcase}") %></span>
+                <span class="service-icon rounded-circle mx-auto mb-3"><%= image_tag("/assets/img/months/#{(Time.current + 2.month).strftime("%B").downcase}.png", class: "icon-month", alt: "Calendar icon for #{(Time.current + 2.month).strftime("%B %Y")}") %></span>
                 <h4><strong><%= (Time.current + 2.month).strftime("%B %Y") %></strong></h4>
                 <p class="text-faded mb-0">
                     Open for registration
                 </p>
             </div>
             <div class="col-lg-3 col-md-6">
-                <span class="service-icon rounded-circle mx-auto mb-3"><%= image_tag("/assets/img/months/#{(Time.current + 3.month).strftime("%B").downcase}.png", class: "icon-month", alt: "#{(Time.current + 3.month).strftime("%B").downcase}") %></span>
+                <span class="service-icon rounded-circle mx-auto mb-3"><%= image_tag("/assets/img/months/#{(Time.current + 3.month).strftime("%B").downcase}.png", class: "icon-month", alt: "Calendar icon for #{(Time.current + 3.month).strftime("%B %Y")}") %></span>
                 <h4><strong><%= (Time.current + 3.month).strftime("%B %Y") %></strong></h4>
                 <p class="text-faded mb-0">Open for registration</p>
             </div>
@@ -105,12 +105,12 @@
     </div>
 </section>
 <!-- Callout-->
-<section class="callout">
+<section class="callout" role="region" aria-label="Frequently Asked Questions">
     <div class="container px-4 px-lg-5 text-center text-white">
         <h2 class="mx-auto" id="faq" style="scroll-margin-top: 100px;">
             FAQs
         </h2>
-        <p class="lead fw-medium mb-5">Curious about how our IELTS classes work? You're in the right place. We've gathered answers to the questions students ask most, so you can feel confident and informed every step of the way.</p>
+        <p class="lead fw-medium mb-5">Curious about how my ESL classes work? You're in the right place. We've gathered answers to the questions students ask most, so you can feel confident and informed every step of the way.</p>
         <div class="row gx-4 gx-lg-5 justify-content-center mb-5">
             <div class="col-lg-8">
                 <h4 class="text-center">About My Class</h4>
