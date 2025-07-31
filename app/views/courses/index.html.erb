@@ -1,0 +1,64 @@
+<p class="alert alert-success"><%= notice %></p>
+
+<% content_for :title, "Courses" %>
+
+<h1 class="mb-4 text-primary">Courses</h1>
+
+<div class="table-responsive">
+  <table class="table table-bordered table-hover align-middle">
+    <thead class="table-primary">
+      <tr>
+        <th>Year</th>
+        <th>Title</th>
+        <th>When</th>
+        <th>Price</th>
+        <th>Active</th>
+        <th>Jan</th>
+        <th>Feb</th>
+        <th>Mar</th>
+        <th>Apr</th>
+        <th>May</th>
+        <th>Jun</th>
+        <th>Jul</th>
+        <th>Aug</th>
+        <th>Sep</th>
+        <th>Oct</th>
+        <th>Nov</th>
+        <th>Dec</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @courses.each do |course| %>
+        <tr>
+          <td><%= course.year %></td>
+          <td><%= course.title %></td>
+          <td><%= course.when %></td>
+          <td><%= course.price %></td>
+          <td><%= course.active ? "Yes" : "No" %></td>
+          <td><%= course.jan %></td>
+          <td><%= course.feb %></td>
+          <td><%= course.mar %></td>
+          <td><%= course.apr %></td>
+          <td><%= course.may %></td>
+          <td><%= course.jun %></td>
+          <td><%= course.jul %></td>
+          <td><%= course.aug %></td>
+          <td><%= course.sep %></td>
+          <td><%= course.oct %></td>
+          <td><%= course.nov %></td>
+          <td><%= course.dec %></td>
+          <td>
+            <%= link_to "Show", course, class: "btn btn-outline-primary btn-sm" %>
+            <%= link_to "Edit", edit_course_path(course), class: "btn btn-outline-secondary btn-sm" %>
+            <%= button_to "Delete", course, method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-danger btn-sm" %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
+
+<div class="mt-4">
+  <%= link_to "New course", new_course_path, class: "btn btn-primary" %>
+</div>

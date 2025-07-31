@@ -1,4 +1,3 @@
-
 <!-- Skip to main content for accessibility -->
 <a href="#main-content" class="visually-hidden-focusable">Skip to main content</a>
 <!-- About-->
@@ -14,7 +13,7 @@
         <div class="col-lg-7 h-100 d-flex flex-column justify-content-center">
           
           <div class="bg-white rounded shadow-sm p-4 h-100" aria-label="Class Description">
-            <h5 class="fw-bold">🚀 Rapid English Speaking Band 5.5 ➡️ 8 MWF @ 3 pm</h5>
+            <h5 class="fw-bold">🚀 Rapid English Speaking Band 5.5 -> 8</h5>
             <hr>
             <h6><u>Course Description</u>:</h6>
             <p class="fw-bold">Are you <u>stuck</u> in IELTS band 6? OR TOEFL iBT 60–78?!? 🤐</p>
@@ -43,28 +42,32 @@
             <div class="card-body d-flex flex-column justify-content-center">
               <h5 class="card-title text-center">Requirements</h5>
               <ul class="list-unstyled mb-4">
-                <li class="mb-2"><b>IELTS Speaking Score:</b> &gt; 5.5 or</li>
-                <li class="mb-2"><b>TOEFL Speaking Score:</b> &gt; 17 or</li>
-                <li class="mb-2"><b>TOEIC Speaking Score:</b> &gt; 120</li>
-                <li class="mb-2"><b>Mandatory Speaking Test:</b> All new students must take a short speaking test with Ramona (phone/Zoom).</li>
-                <li class="mb-2">Access to a computer or mobile device with internet.</li>
+                <li><b>IELTS Speaking Score:</b> &gt; 5.5 or</li>
+                <li><b>TOEFL Speaking Score:</b> &gt; 17 or</li>
+                <li><b>TOEIC Speaking Score:</b> &gt; 120</li>
+                <li><b>Mandatory Speaking Test:</b> All new students must take a short speaking test with Ramona (phone/Zoom).</li>
+                <li>Access to a computer or mobile device with internet.</li>
               </ul>
               <h5 class="card-title text-center">Class Style</h5>
               <ul class="list-unstyled">
-                <li class="mb-2"><b>Monday, Wednesday, Friday:</b> @3 pm for 2 hours<br />Pronunciation, fluency, and grammar practice</li>
-                <li class="mb-2"><b>Assignments:</b> 1 per week</li>
-                <li class="mb-2"><b>Homework:</b> 4–6 hours per week</li>
-                <li class="mb-2"><b>Mock Test:</b> At the end of every month</li>
-                <li class="mb-2"><b>Class size:</b> 6 maximum</li>
+                <li><b>Each Class:</b> We practice pronunciation, fluency, vocabulary and grammar practice via Q & A</li>
+                <li><b>Assignments:</b> 1 per week</li>
+                <li><b>Homework:</b> 4–6 hours per week</li>
+                <li><b>Mock Test:</b> At the end of every month</li>
+                <li><b>Class size:</b> 6 maximum</li>
               </ul>
-              <p class="fs-4 fw-bold">Price: $600 for 24 hours/month</p>
-              <p class="fw-bold">No registration fee.</p>
               <p class="fw-bold">Month-to-Month.</p>
+              <p class="fw-bold text-danger">No registration fee 👍</p>
             </div>
           </div>
+
+  
           <a class="btn btn-dark btn-xl mt-3 mx-auto d-block" style="max-width: 250px;" href="#schedule" aria-label="View monthly class schedule">Monthy schedule</a>
         </div>
       </div>
+
+      
+
     </div>
 </section>
 <!-- Services-->
@@ -78,40 +81,92 @@
             <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
                 <span class="service-icon rounded-circle mx-auto mb-3"><%= image_tag("/assets/img/months/#{(Time.current).strftime("%B").downcase}.png", class: "icon-month", alt: "Calendar icon for #{(Time.current).strftime("%B %Y")}") %></span>
                 <h4><strong><%= Time.current.strftime("%B %Y") %></strong></h4>
-                <p class="text-faded mb-0">Open for registration</p>
             </div>
             <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
                 <span class="service-icon rounded-circle mx-auto mb-3"><%= image_tag("/assets/img/months/#{(Time.current + 1.month).strftime("%B").downcase}.png", class: "icon-month", alt: "Calendar icon for #{(Time.current + 1.month).strftime("%B %Y")}") %></span>
                 <h4><strong><%= (Time.current + 1.month).strftime("%B %Y") %></strong></h4>
-                <p class="text-faded mb-0">Open for registration</p>
             </div>
             <div class="col-lg-3 col-md-6 mb-5 mb-md-0">
                 <span class="service-icon rounded-circle mx-auto mb-3"><%= image_tag("/assets/img/months/#{(Time.current + 2.month).strftime("%B").downcase}.png", class: "icon-month", alt: "Calendar icon for #{(Time.current + 2.month).strftime("%B %Y")}") %></span>
                 <h4><strong><%= (Time.current + 2.month).strftime("%B %Y") %></strong></h4>
-                <p class="text-faded mb-0">
-                    Open for registration
-                </p>
             </div>
             <div class="col-lg-3 col-md-6">
                 <span class="service-icon rounded-circle mx-auto mb-3"><%= image_tag("/assets/img/months/#{(Time.current + 3.month).strftime("%B").downcase}.png", class: "icon-month", alt: "Calendar icon for #{(Time.current + 3.month).strftime("%B %Y")}") %></span>
                 <h4><strong><%= (Time.current + 3.month).strftime("%B %Y") %></strong></h4>
-                <p class="text-faded mb-0">Open for registration</p>
             </div>
         </div>
         <p class="mb-5 mt-4">
             <strong>Remember!</strong> An English speaking test with Ramona is <b>mandatory</b> before being accepted into the class.
         </p>
+         <!-- Courses Table -->
+         <% @month1 = (Time.current).strftime("%b")
+           @month2 = (Time.current + 1.month).strftime("%b")
+           @month3 = (Time.current + 2.month).strftime("%b")
+           @month4 = (Time.current + 3.month).strftime("%b")
+          %>
+
+          <div class="my-4">
+            <h5 class="fw-bold text-center mb-3">Current & Upcoming Courses</h5>
+            <div class="table-responsive">
+              <table class="table table-bordered table-hover align-middle">
+                <thead class="table-info">
+                  <tr>
+                    <th>Year</th>
+                    <th>Title</th>
+                    <th>When</th>
+                    <th><%= @month1 %></th>
+                    <th><%= @month2 %></th>
+                    <th><%= @month3 %></th>
+                    <th><%= @month4 %></th>
+                    <th>Price</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <% @courses.each do |course| %>
+                    <tr>
+                      <td><%= course.year %></td>
+                      <td><%= course.title %></td>
+                      <td><%= course.when %></td>
+                      <% if course.send(@month1.downcase) == 0 %>
+                        <td class="text-warning">Full</td>
+                      <% else %>
+                        <td><%= course.send(@month1.downcase) %> Spots</td>
+                      <% end %>
+                      <% if course.send(@month2.downcase) == 0 %>
+                        <td class="text-warning">Full</td>
+                      <% else %>
+                        <td><%= course.send(@month2.downcase) %> Spots</td>
+                      <% end %>
+                      <% if course.send(@month3.downcase) == 0 %>
+                        <td class="text-warning">Full</td>
+                      <% else %>
+                        <td><%= course.send(@month3.downcase) %> Spots</td>
+                      <% end %>
+                      <% if course.send(@month4.downcase) == 0 %>
+                        <td class="text-warning">Full</td>
+                      <% else %>
+                        <td><%= course.send(@month4.downcase) %> Spots</td>
+                      <% end %>
+                    
+                    <td>$<%= course.price %>/month CAD</td>
+                    </tr>
+                  <% end %>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
         <a class="btn btn-xl btn-light me-4" href="<%= root_path(anchor: "contact") %>">Contact me!</a>
     </div>
 </section>
 <!-- Callout-->
 <section class="callout" role="region" aria-label="Frequently Asked Questions">
-    <div class="container px-4 px-lg-5 text-center text-white">
+    <div class="container px-4 px-lg-5 text-center">
         <h2 class="mx-auto" id="faq" style="scroll-margin-top: 100px;">
             FAQs
         </h2>
         <p class="lead fw-medium mb-5">Curious about how my ESL classes work? You're in the right place. We've gathered answers to the questions students ask most, so you can feel confident and informed every step of the way.</p>
-        <div class="row gx-4 gx-lg-5 justify-content-center mb-5">
+        <div class="row gx-4 gx-lg-5 justify-content-center mb-5 text-white">
             <div class="col-lg-8">
                 <h4 class="text-center">About My Class</h4>
                 <div class="accordion" id="faqAccordion">
@@ -371,3 +426,8 @@
 <!-- Portfolio-->
 
 <!-- Call to Action-->
+<style>
+  .table tbody tr td {
+    color: #fff;
+  }
+</style>

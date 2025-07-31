@@ -26,6 +26,7 @@ class PagesController < ApplicationController
   end
 
   def class_info
+    @courses = Course.where(active: true).order(year: :asc, title: :asc)
     @header = "ESL with Ramona"
     @header_2 = "Rapid English Fluency"
     @header_3 = "Class Info, Schedule, pricing and FAQs"

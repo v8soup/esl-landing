@@ -1,0 +1,35 @@
+
+<div class="card shadow-sm mb-4">
+  <div class="card-header bg-primary text-white">
+    <h2 class="mb-0"><%= @course.title %></h2>
+  </div>
+  <div class="card-body">
+    <table class="table table-bordered mb-4">
+      <tbody>
+        <tr><th>Year</th><td><%= @course.year %></td></tr>
+        <tr><th>Title</th><td><%= @course.title %></td></tr>
+        <tr><th>When</th><td><%= @course.when %></td></tr>
+        <tr><th>Price</th><td><%= @course.price %></td></tr>
+        <tr><th>Active</th><td><%= @course.active ? "Yes" : "No" %></td></tr>
+        <tr><th>Jan</th><td><%= @course.jan %></td></tr>
+        <tr><th>Feb</th><td><%= @course.feb %></td></tr>
+        <tr><th>Mar</th><td><%= @course.mar %></td></tr>
+        <tr><th>Apr</th><td><%= @course.apr %></td></tr>
+        <tr><th>May</th><td><%= @course.may %></td></tr>
+        <tr><th>Jun</th><td><%= @course.jun %></td></tr>
+        <tr><th>Jul</th><td><%= @course.jul %></td></tr>
+        <tr><th>Aug</th><td><%= @course.aug %></td></tr>
+        <tr><th>Sep</th><td><%= @course.sep %></td></tr>
+        <tr><th>Oct</th><td><%= @course.oct %></td></tr>
+        <tr><th>Nov</th><td><%= @course.nov %></td></tr>
+        <tr><th>Dec</th><td><%= @course.dec %></td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<div class="d-flex gap-2">
+  <%= link_to "Edit this course", edit_course_path(@course), class: "btn btn-outline-primary" %>
+  <%= link_to "Back to courses", courses_path, class: "btn btn-secondary" %>
+  <%= button_to "Destroy this course", @course, method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-danger" %>
+</div>

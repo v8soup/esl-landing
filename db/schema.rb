@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2025_06_23_180000) do
+ActiveRecord::Schema[8.0].define(version: 2025_07_31_220000) do
   create_table "contacts", force: :cascade do |t|
     t.string "email", null: false
     t.string "phone"
@@ -22,6 +22,29 @@ ActiveRecord::Schema[8.0].define(version: 2025_06_23_180000) do
     t.datetime "updated_at", null: false
     t.string "first_name"
     t.string "last_name"
+  end
+
+  create_table "courses", force: :cascade do |t|
+    t.integer "year"
+    t.string "title"
+    t.string "when"
+    t.integer "price"
+    t.boolean "active", default: false
+    t.integer "jan"
+    t.integer "feb"
+    t.integer "mar"
+    t.integer "apr"
+    t.integer "may"
+    t.integer "jun"
+    t.integer "jul"
+    t.integer "aug"
+    t.integer "sep"
+    t.integer "oct"
+    t.integer "nov"
+    t.integer "dec"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["year"], name: "index_courses_on_year"
   end
 
   create_table "sessions", force: :cascade do |t|

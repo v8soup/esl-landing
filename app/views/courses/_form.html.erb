@@ -1,0 +1,88 @@
+<%= form_with(model: course, html: { class: "needs-validation" }) do |form| %>
+  <% if course.errors.any? %>
+    <div class="alert alert-danger">
+      <h4><%= pluralize(course.errors.count, "error") %> prohibited this course from being saved:</h4>
+      <ul>
+        <% course.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="row g-3">
+    <div class="col-md-4">
+      <%= form.label :year, class: "form-label" %>
+      <%= form.number_field :year, class: "form-control" %>
+    </div>
+    <div class="col-md-8">
+      <%= form.label :title, class: "form-label" %>
+      <%= form.text_field :title, class: "form-control" %>
+    </div>
+    <div class="col-md-6">
+      <%= form.label :when, class: "form-label" %>
+      <%= form.text_field :when, class: "form-control" %>
+    </div>
+    <div class="col-md-6">
+      <%= form.label :price, class: "form-label" %>
+      <%= form.number_field :price, class: "form-control" %>
+    </div>
+    <div class="col-md-6">
+      <%= form.label :active, class: "form-label" %>
+      <%= form.select :active, [["Yes", true], ["No", false]], class: "form-select" %>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-2">
+      <%= form.label :jan, class: "form-label" %>
+      <%= form.number_field :jan, class: "form-control" %>
+    </div>
+    <div class="col-md-2">
+      <%= form.label :feb, class: "form-label" %>
+      <%= form.number_field :feb, class: "form-control" %>
+    </div>
+    <div class="col-md-2">
+      <%= form.label :mar, class: "form-label" %>
+      <%= form.number_field :mar, class: "form-control" %>
+    </div>
+    <div class="col-md-2">
+      <%= form.label :apr, class: "form-label" %>
+      <%= form.number_field :apr, class: "form-control" %>
+    </div>
+    <div class="col-md-2">
+      <%= form.label :may, class: "form-label" %>
+      <%= form.number_field :may, class: "form-control" %>
+    </div>
+    <div class="col-md-2">
+      <%= form.label :jun, class: "form-label" %>
+      <%= form.number_field :jun, class: "form-control" %>
+    </div>
+    <div class="col-md-2">
+      <%= form.label :jul, class: "form-label" %>
+      <%= form.number_field :jul, class: "form-control" %>
+    </div>
+    <div class="col-md-2">
+      <%= form.label :aug, class: "form-label" %>
+      <%= form.number_field :aug, class: "form-control" %>
+    </div>
+    <div class="col-md-2">
+      <%= form.label :sep, class: "form-label" %>
+      <%= form.number_field :sep, class: "form-control" %>
+    </div>
+    <div class="col-md-2">
+      <%= form.label :oct, class: "form-label" %>
+      <%= form.number_field :oct, class: "form-control" %>
+    </div>
+    <div class="col-md-2">
+      <%= form.label :nov, class: "form-label" %>
+      <%= form.number_field :nov, class: "form-control" %>
+    </div>
+    <div class="col-md-2">
+      <%= form.label :dec, class: "form-label" %>
+      <%= form.number_field :dec, class: "form-control" %>
+    </div>
+    <div class="col-12 mt-3">
+      <%= form.submit class: "btn btn-primary" %>
+    </div>
+  </div>
+<% end %>
