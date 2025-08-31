@@ -5,12 +5,12 @@
     <div class="card-body">
       <%= form.text_field :first_name, required: true, label: raw('First Name <span class="text-danger">*</span>') %>
       <!-- Honeypot field for spam prevention -->
-      <div style="display:none;">
-        <%= form.text_field :nickname, autocomplete: "off", tabindex: "-1", aria_hidden: "true" %>
+      <div class="hidden-honeypot-field">
+        <%= form.text_field :nickname, autocomplete: "off", tabindex: "-1", aria_hidden: "true", placeholder: "Leave this field blank..." %>
       </div>
-      <%= form.text_field :last_name, label: raw('Last Name') %>
+      <%= form.text_field :last_name %>
       <%= form.email_field :email, required: true, label: raw('Email <span class="text-danger">*</span>') %>
-      <%= form.phone_field :phone %>
+      <%= form.phone_field :phone, placeholder: "Enter your phone number if you'd like a callback" %>
       <%= form.text_field :first_language, required: true, label: raw('First Language <span class="text-danger">*</span>') %>
       <%= form.text_field :subject, required: true, label: raw('Subject <span class="text-danger">*</span>') %>
       <%= form.text_area :message, required: true, label: raw('Message <span class="text-danger">*</span>'), 

@@ -23,6 +23,12 @@ module EslLanding
     #
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
-    config.app_url = "https://esl-app.fly.dev"
+    if ENV["APP_ENV"] == "staging"
+      config.app_url = "https://esl-app-staging.fly.dev"
+      config.landing_url = "https://esl-landing-staging.fly.dev"
+    else
+      config.app_url = "https://app.eslwithramona.ca"
+      config.landing_url = "https://eslwithramona.ca"
+    end
   end
 end

@@ -55,3 +55,10 @@
   font-size: 1.25rem !important;
   font-weight: 600;
 }
+
+/* Honeypot field */
+.hidden-honeypot-field {
+  position: absolute;
+  left: -9999px; /* or display: none; */
+  visibility: hidden;
+}
